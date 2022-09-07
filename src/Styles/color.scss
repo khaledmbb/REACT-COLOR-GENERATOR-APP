@@ -1,0 +1,98 @@
+.box {
+  text-align: start;
+  .error {
+    display: flex;
+    justify-content: center;
+    p {
+      background-color: $error;
+      color: $errorColor;
+      padding: 5px 10px;
+      border: 1px solid $error;
+      border-radius: $radius;
+      width: fit-content;
+    }
+  }
+  .good {
+    display: flex;
+    justify-content: center;
+    p {
+      background-color: $good;
+      color: $goodColor;
+      padding: 5px 10px;
+      border: 1px solid $good;
+      border-radius: $radius;
+      width: fit-content;
+    }
+  }
+  form {
+    text-align: center;
+    margin: $gap 0;
+    width: 100%;
+    background-color: $gray;
+    display: flex;
+    align-items: center;
+    gap: $gap;
+    flex-flow: row nowrap;
+    border-radius: $radius;
+    padding: $gap;
+    label {
+      font-size: 18px;
+      font-weight: 500;
+    }
+    input[type="text"] {
+      padding: 10px 15px;
+      background-color: white;
+      width: 60%;
+      border-radius: $radius;
+      border: none;
+      outline: none;
+      &:focus {
+        outline: 1px solid $color;
+      }
+    }
+    input[type="submit"] {
+      cursor: pointer;
+      background-color: $color;
+      color: white;
+      font-weight: 500;
+      width: 30%;
+      font-size: 18px;
+      border: none;
+      border-radius: $radius;
+      padding: 10px 15px;
+    }
+  }
+  .color-box {
+    margin-top: $gap;
+    ul {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      li {
+        cursor: pointer;
+        height: 150px;
+        display: flex;
+        text-align: center;
+        gap: 10px;
+        justify-content: center;
+        flex-flow: column nowrap;
+        flex-basis: 25%;
+        @media screen and (max-width: 1000px) {
+          flex-basis: calc(100% / 3);
+        }
+        @media screen and (max-width: 800px) {
+          flex-basis: 50%;
+        }
+        @media screen and (max-width: 500px) {
+          flex-basis: 100%;
+        }
+        p {
+          color: $color;
+          &.color-name {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
